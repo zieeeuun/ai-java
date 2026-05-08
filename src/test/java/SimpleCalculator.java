@@ -1,4 +1,4 @@
-package test;
+package test.java;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,21 +33,21 @@ public class SimpleCalculator extends JFrame implements ActionListener {
         JPanel inputResultPanel = new JPanel(new GridLayout(4, 2, 5, 5));
         inputResultPanel.setBackground(panelBgColor); // Apply panel background
 
-        JLabel num1Label = new JLabel("숫자 1:");
+        JLabel num1Label = new JLabel("🎀숫자 1:");
         num1Label.setFont(italicFont);
         num1Label.setForeground(labelTextColor);
         inputResultPanel.add(num1Label);
         num1Field = new JTextField();
         inputResultPanel.add(num1Field);
 
-        JLabel num2Label = new JLabel("숫자 2:");
+        JLabel num2Label = new JLabel("🎀숫자 2:");
         num2Label.setFont(italicFont);
         num2Label.setForeground(labelTextColor);
         inputResultPanel.add(num2Label);
         num2Field = new JTextField();
         inputResultPanel.add(num2Field);
 
-        JLabel operatorLabel = new JLabel("연산자:");
+        JLabel operatorLabel = new JLabel("🎀연산자:");
         operatorLabel.setFont(italicFont);
         operatorLabel.setForeground(labelTextColor);
         inputResultPanel.add(operatorLabel);
@@ -86,7 +86,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
         operatorPanel.add(divideButton);
         inputResultPanel.add(operatorPanel);
 
-        JLabel resultLabel = new JLabel("결과:");
+        JLabel resultLabel = new JLabel("🎀결과:");
         resultLabel.setFont(italicFont);
         resultLabel.setForeground(labelTextColor);
         inputResultPanel.add(resultLabel);
@@ -121,7 +121,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
         try {
             num1 = Double.parseDouble(num1Field.getText());
         } catch (NumberFormatException ex) {
-            resultField.setText("숫자 1 오류");
+            resultField.setText("✨숫자 1 오류✨");
             validInput = false;
         }
 
@@ -129,7 +129,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
             try {
                 num2 = Double.parseDouble(num2Field.getText());
             } catch (NumberFormatException ex) {
-                resultField.setText("숫자 2 오류");
+                resultField.setText("✨숫자 2 오류✨");
                 validInput = false;
             }
         }
@@ -150,13 +150,13 @@ public class SimpleCalculator extends JFrame implements ActionListener {
                     break;
                 case "/":
                     if (num2 == 0) {
-                        resultField.setText("0으로 나눌 수 없음");
+                        resultField.setText("🎀0으로 나눌 수 없음🎀");
                         return; // Exit early for division by zero
                     }
                     result = num1 / num2;
                     break;
                 default:
-                    resultField.setText("알 수 없는 연산");
+                    resultField.setText("🎀알 수 없는 연산🎀");
                     return;
             }
             resultField.setText(String.valueOf(result));
