@@ -1,3 +1,5 @@
+![intro image](assets/intro-image.png)
+
 # 🎀 AI Java
 
 > *Elegant AI implementations in Java - Graceful as a ballet ribbon, powerful as intelligent systems*
